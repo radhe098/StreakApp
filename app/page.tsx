@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <NAvbar/>
     <Landing/>
-    <Scroller/>
+    {/* <Scroller/> */}
 {/* <Scroll/> */}
     <Demo/>
     <Footer/>
