@@ -1,13 +1,14 @@
-"use client";
+"use client"
 import React, { useState } from 'react';
 import Image from "next/image";
 import shoe from '@/public/shoeimg.jpg';
 
 interface ProfilePictureProps {
   onChange: (newImage: string) => void;
+  style?: React.CSSProperties; // Add style prop
 }
 
-const ProfilePicture: React.FC<ProfilePictureProps> = ({ onChange }) => {
+const ProfilePicture: React.FC<ProfilePictureProps> = ({ onChange, style }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [imageSrc, setImageSrc] = useState<string>(shoe.src);
 
@@ -26,7 +27,7 @@ const ProfilePicture: React.FC<ProfilePictureProps> = ({ onChange }) => {
   };
 
   return (
-    <div className="relative h-40 w-40">
+    <div className="relative h-40 w-40" style={style}> {/* Apply style prop here */}
       <div
         onClick={() => setIsEditing(true)}
         className="h-full w-full bg-blue-200 border border-gray-700 rounded-full hover:cursor-pointer overflow-hidden flex items-center justify-center"
