@@ -160,3 +160,28 @@ body {
     width: 5rem;
   }
 }
+
+
+
+
+.rainbow{
+  /* background: radial-gradient(circle, #4Ff6ff, #ff95f6, #ffdde1); */
+
+  background: linear-gradient(120deg,#4Ff6ff, #ff95f6, #ffdde1, #ACB6E5);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+  height: 100vh;
+}
+
+@keyframes rainbow{
+  0% {
+    background-position: 0% 50%;
+  }
+  30% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+ 

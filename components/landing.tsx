@@ -1,12 +1,16 @@
-
 "use client"
+import NextVideo from 'next-video';
+import video from '@/videos/bgvideo.mp4'
 import { useInView } from 'react-intersection-observer';
 import { motion } from "framer-motion";
 import Image from "next/image";
 import nexy from "@/public/checklist.svg"
-import Scroller from "@/components/acompo";
-import pattern from "@/public/pattern2.webp";
+import { useRouter } from 'next/navigation'
 export default function Landing() {
+    const router = useRouter()
+    const handleRoute = () => {
+        router.push('/login')
+    }
     const { ref: ref, inView: inView } = useInView({
         threshold: 0.1,
         triggerOnce: true,
@@ -29,22 +33,22 @@ export default function Landing() {
         <>
             <div className="mt-48" >
 
-                <div className="m-12 mb-48 h-auto bg-transparent flex justify-between px-7 gap-4 mx-10">
+                <div className="m-12 mb-48  h-auto bg-transparent flex justify-between sm:flex-1 px-7 gap-4 mx-10">
                     <motion.div
                          initial={{ x: -1000 }}
                          animate={{ x: 0 }}
                          transition={{ duration: 1 }}
 
-                     className="font2  h-[300px] w-auto p-3      ">
+                     className="font2  h-[300px] w-auto p-3">
                         <h1 className=" font-bold">
                             Organising your streaks </h1><span><h1 className=" font-bold" >Making them Public </h1></span>
                         <h1 className=" font-bold">Gain followers
                         </h1></motion.div>
                     <motion.div 
-                      initial={{ x: 1000 }}
-                      animate={{ x: 0 }}
+                      initial={{ x: 200, opacity: 0 }}
+                      animate={{ x: 0, opacity:1 }}
                       transition={{ duration: 1 }}
-                    className="   bg-violet-400 flex -rotate-12 -py-12 px-3 rounded-3xl mx-10 justify-center  hover:bg-violet-600 animate-teleport">
+                    className="   bg-violet-400 flex -rotate-12 -py-12 px-3 rounded-3xl mx-10 justify-center  hover:bg-violet-500 animate-teleport">
                         <Image src={nexy} alt="checklist" className="-mt-12 w-56 " />
                     </motion.div>
                 </div>               
@@ -72,7 +76,7 @@ export default function Landing() {
                     
                     <motion.div
                     ref={ref1}
-                    initial={{ x: -1000, opacity: 0.5 }}
+                    initial={{ x: -200, opacity: 0 }}
                     animate={inView1 ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: .5 }}
                      className="h-[250px] mb-20 w-auto p-3 flex flex-row justify-start">
@@ -93,7 +97,7 @@ export default function Landing() {
                     </motion.div>
                     <motion.div
                     ref={ref2}
-                    initial={{ x: 1000, opacity: 0.5 }}
+                    initial={{ x:200, opacity: 0 }}
                     animate={inView2 ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 1 }}
                      className="h-[250px] mb-20 mt-12 w-auto p-3 flex flex-row justify-start ">
@@ -116,12 +120,15 @@ export default function Landing() {
                 initial={{ y:-100 , opacity: 0 }}
                 animate={inView3 ? { y:0 , opacity: 1 } : {}}
                 transition={{ duration: .5 }}
-                className="bg-violet-300 h-24 w-[80%] container m-auto mt-12 ">
-                    <h1 className="text-center h-auto p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1>
+                className="bg-violet-300 cursor-pointer h-24 w-[80%] container m-auto mt-12 ">
+                    <h1 onClick={handleRoute} className="text-center h-auto p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1>
                 </motion.div>
-                <div className=" m-24 bg-gradient-to-tl from-violet-300 to-gray-300 rounded-3xl  w-[90%] container  p-2 ">
-                <div className="bg-white h-[600px] items-center flex justify-center rounded-3xl   ">
-                    <h1 className="text-center h-10  p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1>
+                <div className=" m-24 bg-gradient-to-tl overflow-hidden from-violet-300 to-gray-300 rounded-3xl  w-[90%] container  p-2 ">
+                <div className="bg-white h-[600px] hover:h-[680px] items-center flex justify-center rounded-3xl   ">
+                <NextVideo src={video}/>
+
+                    {/* <h1 className="text-center h-10  p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1> */}
+                    
                 </div>
                 </div>
 
