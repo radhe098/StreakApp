@@ -1,5 +1,5 @@
 
-import Ppic from "@/components/features/ppic/profilepic";
+// import Ppic from "@/components/features/ppic/profilepic";
 import { FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import coimg from "@/public/coverimage.jpg";
 
@@ -16,7 +16,7 @@ export default function page(){
 style={{
     backgroundImage: `url(${coimg.src})`, backgroundSize: ' cover', backgroundPosition: 'right', backgroundRepeat: 'no-repeat'    
   }}    >
-      <Ppic  />
+      {/* <Ppic  /> */}
         <div className="  rounded-lg bg-white border-white border flex-col justify-center p-2 w-[18rem]">
             <h1 className="text-black text-4xl text-center mt-2 sm:mt-6 ">Jhon Doe</h1>
             <div className="flex justify-around sm:mt-3 mt-1 bg-white">

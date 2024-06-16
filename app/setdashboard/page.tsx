@@ -2,7 +2,7 @@
 import { BiMessageSquareEdit } from "react-icons/bi";
 // pages/setdashboard.tsx
 import React, { useState } from 'react';
-import ProfilePicture from "@/components/features/ppic/profilepic";
+// import ProfilePicture from "@/components/features/ppic/profilepic";
 
 const SetDashboard: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -27,10 +27,7 @@ return (
             <div className="absolute inset-0 flex items-center justify-center">
               <BiMessageSquareEdit className="text-4xl text-gray-500" />
             </div>
-            <Ppic
-              onChange={handleProfilePictureChange}
-               
-            />
+            {/* <Ppic onChange={handleProfilePictureChange}/> */}
           </div>
           <div className="w-full border-black border-b mt-3"></div>
           <form onSubmit={handleSubmit} className="space-y-8">
