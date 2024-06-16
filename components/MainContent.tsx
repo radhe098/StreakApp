@@ -1,9 +1,15 @@
-export default function mainComponent(){
-    return(
-        <div className="w-[80%]] h-[80%] flex justify-center m-12 border-white border-8 ">
-            
-            <iframe width="1200" height="800" src="https://www.youtube.com/embed/STScKOUpXR8?si=kDdVotD-cShFgyZs" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  ></iframe>
-            
+import React from 'react';
+
+export default function MainComponent() {
+    return (
+        <div className="relative pt-[56.25%] h-0 overflow-hidden">
+            <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/STScKOUpXR8?si=kDdVotD-cShFgyZs"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+            ></iframe>
         </div>
     );
 }
