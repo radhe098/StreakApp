@@ -118,13 +118,10 @@ export default function Landing() {
                 className="bg-violet-300 cursor-pointer h-24 w-[80%] container m-auto mt-12 ">
                     <h1 onClick={handleRoute} className="text-center h-auto p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1>
                 </motion.div>
-
                 <div className="  mt-4 m-auto  bg-gradient-to-tl overflow-hidden from-violet-300 to-gray-300 rounded-3xl  w-[90%] container  p-2 ">
                 <div className="bg-white  sm:h-[24rem] lg:h-[29rem] items-center flex justify-center overflow-hidden rounded-3xl   ">
                 <NextVideo src={video}/>
-
                     {/* <h1 className="text-center h-10  p-4 rounded-lg text-black bg-purple-300 text-6xl font-bold">Try Now</h1> */}
-                    
                 </div>
                 </div>
 

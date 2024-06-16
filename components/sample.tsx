@@ -25,7 +25,7 @@ const Home = () => {
         </div>
     </div>
       ) : (
-        <div className="m-auto p-2 bg-gradient-radial  border-white border w-[100%] mb-12">
+        <div className="m-auto p-2 bg-gradient-radial w-[100%] mb-12">
         <MainComp />
     </div>
       )}
