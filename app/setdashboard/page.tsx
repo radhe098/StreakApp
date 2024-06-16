@@ -5,78 +5,49 @@ import React, { useState } from 'react';
 // import ProfilePicture from "@/components/features/ppic/profilepic";
 
 const SetDashboard: React.FC = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [profilePicture, setProfilePicture] = useState<string | null>(null);
+  // const [username, setUsername] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [profilePicture, setProfilePicture] = useState<string | null>(null);
 
-  const handleProfilePictureChange = (newImage: string) => {
-    setProfilePicture(newImage);
-  };
+  // const handleProfilePictureChange = (newImage: string) => {
+  //   setProfilePicture(newImage);
+  // };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    // Handle form submission logic here (e.g., send data to an API)
-    console.log({ username, email, password, profilePicture });
-  };
+  // const handleSubmit = (event: React.FormEvent) => {
+  //   event.preventDefault();
+  //   // Handle form submission logic here (e.g., send data to an API)
+  //   console.log({ username, email, password, profilePicture });
+  // };
 return (
     <>
-      <div className="w-full flex flex-col items-center p-8 h-screen">
-        <div className="bg-opacity-150 bg-white rounded-xl items-center p-12 w-[80%] sm:w-[calc(70vw - 40px)]">
-        <div className="relative">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <BiMessageSquareEdit className="text-4xl text-gray-500" />
-            </div>
-            {/* <Ppic onChange={handleProfilePictureChange}/> */}
-          </div>
-          <div className="w-full border-black border-b mt-3"></div>
-          <form onSubmit={handleSubmit} className="space-y-8">
-            <div className="flex flex-col sm:flex-row justify-around text-black mt-4">
-              <h1 className="text-3xl w-48">Username</h1>
-              <textarea
-                name="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Name"
-                className="w-full sm:w-64 px-4 h-8 mt-2 sm:mt-0"
-              ></textarea>
-            </div>
-            <div className="flex flex-col sm:flex-row justify-around text-black mt-4">
-              <h1 className="text-3xl w-48">Email</h1>
-              <textarea
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-                className="w-full sm:w-64 px-4 h-8 mt-2 sm:mt-0"
-              ></textarea>
-            </div>
-            <div className="flex flex-col sm:flex-row justify-around text-black mt-4">
-              <h1 className="text-3xl w-48">Password</h1>
-              <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-                className="w-full sm:w-64 px-4 h-8 mt-2 sm:mt-0"
-              />
-            </div>
-            <div className="flex justify-start m-auto gap-8  mt-8">
-              <button type="submit" className="px-6 py-2 text-xl bg-violet-400 hover:bg-violet-800 text-bold text-black rounded-sm">
-                Save 
-              </button>
+        <div  className=" w-fulll h-screen bg-gradient-to-b from-black  text-white justify-center flex" 
+        // style={{background:"#433bb8c4"}}
+        >
+            <div className=" border-white border m-12  h-auto  w-screen  sm:min-h-[18rem] md:min-h-[22rem] lg:min-h-[16rem] xl:min-h-[24rem] flex-col  bg-opacity-10 text-white"> 
 
-              <button type="submit" className="px-5 py-2 text-xl hover:bg-red-600 hover:text-white  text-red-500">
-                cancel
-              </button>
+              
+            <div className=" flex ">
+              <h1 className="font1 text-center w-full"> Your Current Streaks </h1>
+
             </div>
-          </form>
-        </div>
+            <div className=" flex justify-center items-center w-screen">
+            <div className="m-auto   p-4  mt-4 mx-4 w-[64rem] h-[18rem] bg-gradient-to-t from-violet-600 rounded-lg py-4 flex-col space-y-6 overflow-hidden">
+            <h1 className="sm:text-4xl text-3xl text-black bg-violet-400 w-auto h-16 rounded-lg text-center -tracking-tightest sm:py-2 overflow-hidden">
+  Lorem is my new streak</h1>
+              <div className=" w-[100%] h-4 rounded-xl bg-white ">
+                <div className=" bg-violet-400 w-[2rem] rounded-xl    h-full "></div>
+              </div>
+              <div className=" grid grid-cols-2 gap-6     p-2  rounded-lg   ">
+                 <h1 className=" text-2xl ">Staring Day - {} </h1>
+                <h1> </h1>
+                                <h1  className=" text-2xl " >Finale Day-  {} </h1>
+
+                <button className=" text-2xl bg-gray-800 rounded-lg w-[8] md:min-w-[12rem] p-2 " >Check It Now - {} </button>              </div>
+            </div> 
+            </div>
+            </div>
       </div>
-      <div className=" flex justify-center h-full w-96  ">
-      <div className="m-8 transform -translate-x-1/2 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-b-[100px] bg-green-200"></div>
-    </div>
     </>
   );
 };
