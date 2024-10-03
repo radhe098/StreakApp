@@ -20,7 +20,8 @@ const InfiniteScroller: React.FC = () => {
   );
 
   return (
-    <div className=" no-scrollbar mt-12  bg-gradient-to-br from-gray-900 to-purple-900 h-[480px] overflow-y-scroll p-8 overflow-hidden scroll-container">
+
+    <div className=" w-[32rem] sm:w-[48rem] lg:w-[60rem] xl:w-[83rem] no-scrollbar mt-12 m-auto bg-gradient-to-br from-gray-900 to-purple-900 h-[480px] overflow-y-scroll p-8 overflow-hidden scroll-container">
       <div className="flex flex-wrap  justify-around items-center gap-8 w-full">
         {items.map((_, index) => {
           if (index === items.length - 1) {

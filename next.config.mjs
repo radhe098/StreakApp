@@ -3,7 +3,7 @@ import { withNextVideo } from "next-video/process";
 const nextConfig = {
     reactStrictMode: true,
     images: {
-      domains: ['unsplash.com','dummyimage.com'],
+      domains: ['unsplash.com','dummyimage.com','i.imgur.com'],
     },
 };
 

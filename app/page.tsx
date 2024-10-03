@@ -9,8 +9,8 @@ export default function Home() {
     <>
     <NAvbar/>
     <Landing/>
-    {/* <Scroller/>  */}
-{/* <Scroll/> */}
+    <Scroller/> 
+<Scroll/> 
 <Footer/>
     
     </>

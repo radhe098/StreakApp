@@ -1,6 +1,8 @@
 // components/Marquee.tsx
 import { useEffect } from 'react';
+import shoe from '../public/shoeimg.jpg'
 import Image from 'next/image';
+
 
 const Marquee: React.FC = () => {
   useEffect(() => {
@@ -16,20 +18,11 @@ const Marquee: React.FC = () => {
   }, []);
 
   return (
-    <div className="marquee">
+    <div className="marquee p-4 m-auto w-[32rem] sm:w-[48rem] lg:w-[60rem] xl:w-[83rem]">
       <ul className="marquee-content flex list-none h-full animate-scrolling">
-        <li><i className="fab fa-github">  <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-codepen"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-free-code-camp"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-dev"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-react"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-vuejs"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-angular"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-node"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-wordpress"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-aws"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-docker"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
-        <li><i className="fab fa-android"> <Image src="https://dummyimage.com/600x400/edb2ed/fff.jpg&text=hello" alt="checklist" width={100} height={100} className="inline-block h-48 w-72 " /></i></li>
+        <li><i className="fab fa-android m-4"> 
+           <Image src="https://i.imgur.com/2Ad9Wdo.png" alt="Image" width={200} height={150} objectFit="cover" className="inline-block border border-white h-full w-full " />
+           </i></li>
       </ul>
     </div>
   );

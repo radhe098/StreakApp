@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
     <div>
-    <div className="footer flex flex-col justify-between min-w-[20rem] sm:w-screen  p-2 sm:p-4 lg:p-6 h-auto bg-gray-800 bg-opacity-40">
+    <div className="footer w-[32rem] sm:w-[48rem] lg:w-[60rem] xl:w-[83rem] m-auto flex flex-col justify-between min-w-[20rem] p-2 sm:p-4 lg:p-6 h-auto bg-gray-800 bg-opacity-40">
       <div className="toper sm:flex flex-wrap  justify-around gap-4">
         
         <div className="address text-white gap-2 w-auto ">
