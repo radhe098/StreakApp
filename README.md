@@ -56,7 +56,8 @@ npm install
 npm run dev
 ```
 5.App will be running at
-```bash http://localhost:3000
+```bash
+ http://localhost:3000
 ```
 ### Project Structure
 ```bash
